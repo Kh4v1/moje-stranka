@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Můj testovací web</title>
+</head>
+<body>
+  <h1>Vítej na mém testovacím webu</h1>
+  <form>
+    <label for="input">Napiš něco:</label>
+    <input type="text" id="input" name="input">
+    <input type="submit" value="Odeslat">
+  </form>
+  <p id="vystup"></p>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const input = urlParams.get('input');
+    if (input) {
+      document.getElementById("vystup").innerHTML = "Zadal jsi: " + input;
+    }
+  </script>
+</body>
+</html>
